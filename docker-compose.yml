@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  event-finder:
+    build: .
+    volumes:
+      - .:/app
+    command: python main.py
