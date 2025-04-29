@@ -1,52 +1,87 @@
-# filters.py
 from datetime import datetime
+import requests
+import json
+from filters_utils import get_filters
 
-def get_filters():
-    print("Ingrese los filtros para buscar actividades:\n")
-
-    # Fecha (semana o rango personalizado)
-    start_date_str = input("Fecha de inicio (YYYY-MM-DD): ")
-    end_date_str = input("Fecha de fin (YYYY-MM-DD): ")
-
+# Función para convertir string a fecha
+def parse_date(date_str):
     try:
-        start_date = datetime.strptime(start_date_str, "%Y-%m-%d").date()
-        end_date = datetime.strptime(end_date_str, "%Y-%m-%d").date()
+        return datetime.strptime(date_str, "%Y-%m-%d").date()
     except ValueError:
-        print("⚠️ Formato de fecha incorrecto. Usar YYYY-MM-DD.")
         return None
 
-    # Edad
+# Función para convertir string ISO a fecha
+def parse_event_date(date_str):
     try:
-        age = int(input("Edad de tus hijos (solo un número por ahora): "))
-    except ValueError:
-        print("⚠️ La edad debe ser un número.")
+        return datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S").date()
+    except (TypeError, ValueError):
         return None
 
-    # Presupuesto
-    try:
-        budget = float(input("Presupuesto máximo (en euros): "))
-    except ValueError:
-        print("⚠️ El presupuesto debe ser un número.")
-        return None
+# Función para obtener los eventos filtrados
+def get_filtered_events(filters):
+    start_date = parse_date(filters.get("start_date"))
+    end_date = parse_date(filters.get("end_date"))
+    city = filters.get("city", "").lower()
+    age = filters.get("age", 0)
+    budget = filters.get("budget", float("inf"))
 
-    # Localidad
-    city = input("Ciudad (helsinki / espoo / vantaa): ").strip().lower()
-    if city not in ["helsinki", "espoo", "vantaa"]:
-        print("⚠️ Ciudad no reconocida.")
-        return None
+    if not (start_date and end_date):
+        print("❌ Error: Fechas inválidas en los filtros.")
+        return []
 
-    return {
-        "start_date": start_date,
-        "end_date": end_date,
-        "age": age,
-        "budget": budget,
-        "city": city
-    }
+    url = f"https://tapahtumat.hel.fi/_next/data/HxVjk-R8GkORWliNheqc0/en/search.json?onlyChildrenEvents=true&startDate={start_date}&endDate={end_date}&city={city}"
+    response = requests.get(url)
+    data = response.json()
 
-# Test rápido
-if __name__ == "__main__":
+    events = data.get("pageProps", {}).get("events", {}).get("data", [])
+    filtered_events = []
+
+    for event in events:
+        event_date = parse_event_date(event.get("start_time"))
+        if not event_date or not (start_date <= event_date <= end_date):
+            continue
+
+        # Filtrar por edad mínima si se encuentra
+        min_age = event.get("age_restriction", 0)
+        if isinstance(min_age, str):
+            try:
+                min_age = int(min_age)
+            except ValueError:
+                min_age = 0
+        if min_age > age:
+            continue
+
+        # Filtrar por presupuesto
+        price = event.get("price", 0)
+        if isinstance(price, str):
+            try:
+                price = float(price.replace("€", "").strip())
+            except ValueError:
+                price = 0
+        if price > budget:
+            continue
+
+        filtered_events.append({
+            "title": event.get("name", {}).get("en", "No title"),
+            "start_time": event.get("start_time", "No date"),
+            "location": event.get("location", {}).get("name", {}).get("en", "No location"),
+        })
+
+    return filtered_events
+
+# Función principal
+def main():
     filters = get_filters()
     if filters:
-        print("\n✅ Filtros seleccionados:")
-        for key, value in filters.items():
-            print(f"{key}: {value}")
+        events = get_filtered_events(filters)
+        if events:
+            print("\n✅ Eventos encontrados:")
+            for event in events:
+                print(f"Title: {event['title']}\nDate: {event['start_time']}\nLocation: {event['location']}\n---")
+        else:
+            print("❌ No se encontraron eventos con los filtros proporcionados.")
+    else:
+        print("❌ No se pudieron aplicar los filtros.")
+
+if __name__ == "__main__":
+    main()
