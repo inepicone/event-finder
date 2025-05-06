@@ -1,7 +1,10 @@
 {
-    "start_date": "2024-05-01",
-    "end_date": "2024-05-31",
-    "city": "Helsinki",
-    "age": 4,
-    "budget": 10
+    "text": "music",
+    "categories": ["music", "culture"],
+    "dateTypes": ["this_week"],
+    "isFree": true,
+    "onlyChildrenEvents": false,
+    "onlyEveningEvents": false,
+    "onlyRemoteEvents": false,
+    "places": []
   }

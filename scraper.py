@@ -1,19 +1,36 @@
 import requests
-import json
-# URL que carga los datos ya renderizados en formato JSON
-url = "https://tapahtumat.hel.fi/_next/data/HxVjk-R8GkORWliNheqc0/en/search.json?onlyChildrenEvents=true"
+from bs4 import BeautifulSoup
 
-response = requests.get(url)
-data = response.json()
+def scrape_events(url):
+    response = requests.get(url)
+    if response.status_code != 200:
+        print(f"❌ Error al acceder a la página: {response.status_code}")
+        return
 
-print(json.dumps(data, indent=2))
+    soup = BeautifulSoup(response.text, "html.parser")
 
-# Navegamos el JSON para llegar a los eventos
-events = data["pageProps"]["events"]["data"]
+    # Encontrar todos los artículos de eventos
+    event_cards = soup.find_all("article", class_="jet-listing-dynamic-post")
 
-# Imprimimos algunos datos básicos de los eventos
-for event in events:
-    title = event.get("name", {}).get("en", "No title")
-    start_time = event.get("start_time", "No date")
-    location = event.get("location", {}).get("name", {}).get("en", "No location")
-    print(f"Title: {title}\nDate: {start_time}\nLocation: {location}\n---")
+    for card in event_cards:
+        # Título y link
+        title_tag = card.find("h3", class_="jet-listing-dynamic-post__title")
+        title = title_tag.text.strip() if title_tag else "Sin título"
+        link = title_tag.find("a")["href"] if title_tag and title_tag.find("a") else "Sin link"
+
+        # Fecha y hora
+        meta_items = card.find_all("div", class_="jet-listing-dynamic-post__meta-item")
+        fecha = hora = "Sin info"
+        for item in meta_items:
+            icon = item.find("span", class_="jet-listing-dynamic-post__meta-icon")
+            texto = item.find("span", class_="jet-listing-dynamic-post__meta-text").text.strip()
+            if "calendar" in icon["class"][-1]:
+                fecha = texto
+            elif "clock" in icon["class"][-1]:
+                hora = texto
+
+        print(f"📅 Evento: {title}")
+        print(f"📆 Fecha: {fecha}")
+        print(f"🕒 Hora: {hora}")
+        print(f"🔗 Link: {link}")
+        print("-" * 40)

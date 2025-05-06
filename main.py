@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from filters import main as filter_main
+from filters_utils import build_url_from_filters
+import json
+import scraper
 
 def check_site_title():
     options = Options()
@@ -14,6 +16,15 @@ def check_site_title():
     print("🌐 Título de la página:", driver.title)
     driver.quit()
 
+def get_url_from_filters():
+    with open("filters.json", "r") as f:
+        user_input = json.load(f)
+    return build_url_from_filters(user_input)
+
 if __name__ == "__main__":
-    check_site_title()  # esto es opcional, solo para verificar si carga la página
-    filter_main()
+    check_site_title()
+
+    url = get_url_from_filters()
+    print("🔗 URL generada:", url)
+
+    scraper.scrape_events(url)
