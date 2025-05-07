@@ -1,6 +1,6 @@
 {
     "text": "music",
-    "categories": ["music", "culture"],
+    "categories": ["music"],
     "dateTypes": ["this_week"],
     "isFree": true,
     "onlyChildrenEvents": false,

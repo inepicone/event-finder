@@ -28,3 +28,5 @@ if __name__ == "__main__":
     print("🔗 URL generada:", url)
 
     scraper.scrape_events(url)
+    events = scraper.scrape_events(url)
+    scraper.save_to_json(events, "data/events.json")
