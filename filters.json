@@ -1,6 +1,6 @@
 {
-    "text": "music",
-    "categories": ["music"],
+    "text": "",
+    "categories": [],
     "dateTypes": ["today"],
     "isFree": true,
     "onlyChildrenEvents": true,

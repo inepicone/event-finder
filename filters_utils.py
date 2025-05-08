@@ -38,3 +38,41 @@ def build_url_from_filters(filters):
         query_params["places"] = ",".join(filters["places"])
 
     return f"{base_url}?{urlencode(query_params)}"
+
+def build_api_url_from_filters(filters):
+    base_url = "https://api.hel.fi/linkedevents/v1/event/"
+    params = {}
+
+    if "text" in filters:
+        params["text"] = filters["text"]
+
+    if "isFree" in filters:
+        params["is_free"] = str(filters["isFree"]).lower()
+
+    if "onlyChildrenEvents" in filters and filters["onlyChildrenEvents"]:
+        children_keywords = [
+            "yso:p4354",    # children
+            "yso:p13050",   # child culture
+            "yso:p11617"    # family event
+        ]
+    if "keyword" in params:
+        # Si ya hay keywords, agregamos
+        params["keyword"] += "," + ",".join(children_keywords)
+    else:
+        params["keyword"] = ",".join(children_keywords)
+
+    if filters.get("start"):
+        params["start"] = filters["start"]
+
+    if filters.get("end"):
+        params["end"] = filters["end"]
+
+    if filters.get("categories"):
+        # Esto depende de los IDs de keywords reales de la API
+        params["keyword"] = ",".join(filters["categories"])
+
+    # Ignoramos 'dateTypes' ya que no es un parámetro válido para la API
+    # No se agrega a 'params'
+
+    query_string = urlencode(params)
+    return f"{base_url}?{query_string}"
