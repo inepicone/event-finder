@@ -9,17 +9,40 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 from filters_utils import get_filters, build_url_from_filters
 
-def scroll_to_load_all(driver, pause_time=1):
-    """Hace scroll hasta el fondo varias veces para cargar todos los eventos."""
-    last_height = driver.execute_script("return document.body.scrollHeight")
-
+def click_show_more_until_done(driver, pause_time=2):
+    """Clickea repetidamente el botón 'Show more' hasta que ya no está visible o no carga más eventos."""
     while True:
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(pause_time)
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
+        try:
+            # Ver cuántos eventos hay antes del clic
+            events_before = len(driver.find_elements(By.CSS_SELECTOR, 'a[aria-label^="Go to event:"]'))
+
+            # Verificamos si el botón existe y es clickeable
+            show_more_buttons = driver.find_elements(By.CSS_SELECTOR, 
+                "button.Button-module_button__1msFE.button_hds-button__2A0je.Button-module_success__CU9nK.button_hds-button--success__9hpuD")
+            
+            if not show_more_buttons:
+                print("✅ Botón 'Show more' ya no está en el DOM.")
+                break
+
+            button = show_more_buttons[0]
+            if not button.is_enabled():
+                print("✅ Botón 'Show more' está deshabilitado.")
+                break
+
+            # Scrolleo y clic
+            driver.execute_script("arguments[0].scrollIntoView(true);", button)
+            time.sleep(1)  # para que scroll no interrumpa el clic
+            button.click()
+
+            # Esperamos que aparezcan más eventos
+            WebDriverWait(driver, 10).until(
+                lambda d: len(d.find_elements(By.CSS_SELECTOR, 'a[aria-label^="Go to event:"]')) > events_before
+            )
+            time.sleep(pause_time)
+
+        except Exception as e:
+            print("✅ Todos los eventos fueron cargados o no se pueden cargar más.")
             break
-        last_height = new_height
 
 def scrape_events(url):
     # Configurar navegador sin interfaz
@@ -36,7 +59,7 @@ def scrape_events(url):
         WebDriverWait(driver, 120).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "main"))
         )
-        scroll_to_load_all(driver)
+        click_show_more_until_done(driver)
     except Exception as e:
         print("⏱️ Timeout o error durante carga inicial:", repr(e))
         print("🌐 Título de la página:", driver.title)
@@ -59,8 +82,8 @@ def scrape_events(url):
             full_link = f"https://tapahtumat.hel.fi{href}"
             events.append({
                 "title": title,
-                "date": "N/A",  # Podés scrapearlo luego del detalle si querés
-                "time": "N/A",  # Idem
+                "date": "N/A",
+                "time": "N/A",
                 "link": full_link
             })
 

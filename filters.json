@@ -1,9 +1,9 @@
 {
     "text": "music",
     "categories": ["music"],
-    "dateTypes": ["this_week"],
+    "dateTypes": ["today"],
     "isFree": true,
-    "onlyChildrenEvents": false,
+    "onlyChildrenEvents": true,
     "onlyEveningEvents": false,
     "onlyRemoteEvents": false,
     "places": []
