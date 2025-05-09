@@ -1,122 +1,613 @@
 [
   {
+    "title": "Iltasatutuokio",
+    "description": "<p><strong>Tervetuloa Malminkartanon kirjaston iltasatutuokioihin! Torstaisin alkaen 6. maaliskuuta klo 18.00 luemme satukirjoja perheen pienimmille.&nbsp;&nbsp;Satutuokiotamme vetää vapaaehtoisemme, taianomainen satukertoja Timo!</strong></p><p>&nbsp;</p><p><strong>Kutsumme&nbsp; sekä lapset että heidän vanhempansa lämpimästi mukaan nauttimaan satujen lumosta. Tervetuloa!</strong></p>",
+    "start_time": "2025-03-06T16:00:00Z",
+    "end_time": "2025-05-29T16:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/iltasatutuokio.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": ""
+    },
+    "link": "https://tapahtumat.hel.fi/en/events/helsinki:agkufcminm"
+  },
+  {
     "title": "Suomen kielen kielikahvila",
+    "description": "<p>Haluatko harjoitella suomen kieltä? Do you want to practice Finnish language? Ma rabtaa in af finnish barato? Хотите попрактиковать финский язык?&nbsp;</p><p>Tule harjoittelemaan suomen kieltä Koivukylän kirjastoon! Keskustelemme rennosti. Juomme kahvia ja teetä. Tervetuloa tutustumaan uusiin ihmisiin!&nbsp;</p><p>Maanantaisin 5.5.2025 - 16.6.2025 kello 16-17.30</p><p>Tapahtuma on ilmainen. Sinun ei tarvitse ilmoittautua.&nbsp;</p><p>Lisää tietoa:&nbsp;</p><p>Shugri Mohamed (suomi, englanti, somali)&nbsp;</p><p><a href=\"mailto:shugri.mohamed@hdl.fi\">shugri.mohamed@hdl.fi</a></p><p>Kuva: Hyvän arjen rakentajat</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
     "start_time": "2025-05-05T13:00:00Z",
     "end_time": "2025-06-16T14:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/Kuva_2_DOOszv2.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": ""
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:aglegan6ie"
   },
   {
     "title": "Laulu/Toimintatuokio",
+    "description": "<p>Yhdessä erilaista toimintaa. Toiveita otetaan vastaan :)&nbsp;</p>",
     "start_time": "2024-11-06T08:30:00Z",
     "end_time": "2025-05-21T08:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/sep%C3%A4n_soinnut.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Lp Maatulli"
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:agjoc4qgsu"
   },
   {
     "title": "Pihapuuhat",
+    "description": "<p>Mm. Erilaisia mielikuvitusleikkejä, tehtäväratoja, liikuntaleikkejä, vuodenaikojen mukaan erilaisia puuhia.</p>",
     "start_time": "2024-11-04T08:00:00Z",
     "end_time": "2025-05-26T11:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/traktori.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Leikkipuisto Maatulli"
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:agjnzut2uu"
   },
   {
+    "title": "Family Café CANCELLED",
+    "description": "<p>Welcome to the family Café. The event is open to all.</p><p><br></p><p>The event is organized by Kiintymysvanhemmuusperheet ry.</p><p>The event is in finnish.</p>",
+    "start_time": "2025-05-09T07:00:00Z",
+    "end_time": "2025-05-09T08:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventCancelled",
+    "images": [
+      "https://tapahtumasyotto.espoo.fi/media/images/e0144be5-96c6-42ea-9b43-6c26721d6e62.png"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": null,
+    "link": "https://tapahtumat.hel.fi/en/events/espoo_le:agki4oxr2q"
+  },
+  {
     "title": "Pihapuuhat",
+    "description": "<p>Vaihtuvia leikkejä leikkipuiston piha-alueella, esimerkiksi etsintäleikit, liikuntatuokiot ja temppuradat. Katso tarkempi viikoittainen ohjelma Facebookista tai Instagramista <a href=\"https://www.facebook.com/leikkipuistomunkki\">https://www.facebook.com/leikkipuistomunkki</a>&nbsp;</p><p><a href=\"https://www.instagram.com/leikkipuistomunkki/\">https://www.instagram.com/leikkipuistomunkki/</a>&nbsp;</p>",
     "start_time": "2025-01-27T07:30:00Z",
     "end_time": "2025-05-26T07:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": 0,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/muumit.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "",
+      "sv": "",
+      "en": ""
+    },
     "link": "https://www.facebook.com/leikkipuistomunkki "
   },
   {
     "title": "Laulu- ja loruhetki",
+    "description": "<p>Tule mukaan laulamaan ja loruttelemaan leikkipuiston katokseen tai pihalle. Laulujen teemat vaihtelevat esimerkiksi vuodenaikojen mukaan. Tuokio sopii kaikenikäisille lapsille. Ilmoittautumista ei tarvita!</p>",
     "start_time": "2025-04-29T06:45:00Z",
     "end_time": "2025-05-27T07:15:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": 6,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/sep%C3%A4n_soinnut.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "",
+      "sv": "",
+      "en": ""
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:aglgxeqnpi"
   },
   {
     "title": "Taaperoiden aamu",
+    "description": "<p>Taaperoiden aamussa sisätilat ovat lapsiperheiden käytössä klo 9.30-11.30. Askartelua, maalaamista tai liikunnallisia tuokioita vaihdellen klo 10 alkaen. Katso tarkempi viikkokohtainen ohjelma facebookista, instagramista tai leikkipuistomme ilmoitustaululta.</p>",
     "start_time": "2025-05-07T06:30:00Z",
     "end_time": "2025-05-28T08:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": 1,
+    "audience_max_age": 5,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/20241113_092856.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "",
+      "sv": "",
+      "en": ""
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:aglgxf3tl4"
   },
   {
     "title": "Vauva-aamu",
+    "description": "<p>Vauva-aamussa leikkipuiston sisätilat ovat vauvaperheiden käytössä klo 9.30-11.30. Ohjatut tuokiot vaihtelevat viikoittain. Katso tarkempi ohjelma Facebookista, Instagramista tai leikkipuiston ilmoitustaululta.</p>",
     "start_time": "2025-05-08T06:30:00Z",
     "end_time": "2025-05-22T08:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": 1,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/nukkevilkuttaa.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "",
+      "sv": "",
+      "en": ""
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:aglkvr6lyq"
   },
   {
-    "title": "Vauva-aamu",
-    "start_time": "2025-05-08T06:30:00Z",
-    "end_time": "2025-05-08T08:30:00Z",
-    "link": "https://tapahtumat.hel.fi/en/events/helsinki:aglkvr5ic4"
-  },
-  {
     "title": "Nuorten lukupiiri",
+    "description": "<p>Hei 13-20-vuotias nuori, tule mukaan lukupiiriin! Lukupiiri kokoontuu kerran kuussa tiistaisin 14.1., 11.2., 18.3., 15.4. ja 20.5.2025 klo 18–19.30.</p><p>&nbsp;</p><p><strong>Kevään lukupiireissä keskustellaan näistä kirjoista:</strong></p><p><strong>14.1.</strong> &nbsp;<a href=\"https://helmet.finna.fi/Search/Results?lookfor=Margaret+Atwood%3A+Orjattaresi&amp;type=AllFields\">Margaret Atwood: Orjattaresi</a></p><p><strong>11.2.</strong> &nbsp;<a href=\"https://helmet.finna.fi/Search/Results?lookfor=Emily+Henry%3A+Rakkautta+rivien+v%C3%A4liss%C3%A4&amp;type=AllFields&amp;limit=20&amp;sort=relevance%2Cid+asc\">Emily Henry: Rakkautta rivien välissä</a></p><p><strong>18.3.</strong> &nbsp;<a href=\"https://helmet.finna.fi/Record/helmet.2328573?sid=4887044922\">Cecelia Ahern: Viallinen</a></p><p><strong>15.4.</strong> &nbsp;<a href=\"https://helmet.finna.fi/Record/helmet.2579858?sid=4887045186\">Annukka Salama: Asioita joista en tiennyt pitäväni</a></p><p><strong>20.5.&nbsp;</strong> <a href=\"https://helmet.finna.fi/Record/helmet.2513676?sid=4887045396\">Leigh Bardugo: Korppien kehä</a></p><p>&nbsp;</p><p>Lukupiiriin ei tarvitse ilmoittautua. Voit hakea lukupiirikirjan Lumon kirjastosta tai varata sen Helmet-sivustolta. &nbsp;Ei haittaa, vaikka et olisi ehtinyt lukemaan kirjaa: tule silti mukaan!</p><p>&nbsp;</p>",
     "start_time": "2025-01-14T16:00:00Z",
     "end_time": "2025-05-20T16:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": 13,
+    "audience_max_age": 20,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/Helmet-tapahtumakuva_12.png"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": ""
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:agj5tnodee"
   },
   {
+    "title": "Pienten aamu",
+    "description": "<p>Tällä kertaa vähän loruleikitään ja tehdään helppo keväinen askartelu, aikaa on myös leppoisalle yhdessäololle ja leikeille. Tarjolla teetä ja pientä purtavaa.&nbsp;</p><p>Nähdään kirjastossa!&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>",
+    "start_time": "2025-05-09T06:30:00Z",
+    "end_time": "2025-05-09T08:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/baby-799964_1920_7iJ24Mf.jpg"
+    ],
+    "keywords": [
+      null
+    ],
+    "provider": {
+      "fi": ""
+    },
+    "link": "https://tapahtumat.hel.fi/en/events/helsinki:aglkuvuova"
+  },
+  {
     "title": "Vauva-aamu",
+    "description": "<p>Yhdessäoloa, leikkiä, liikettä, loruilua,&nbsp;taiteilua tai musiikkia vauvaperheille leikkipuiston sisätiloissa.​</p><p>Ohjattu tuokio&nbsp;klo 10.00–10.30.</p><p>Tarkemmat tiedot tämänkertaisesta tuokiosta löydät viikko-ohjelmasta leikkipuisto Lahnalahden Instagram sivulta, sekä leikkipuiston ikkunasta.</p>",
     "start_time": "2024-09-09T07:00:00Z",
     "end_time": "2025-06-23T08:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/vauva-aamu_G2eZMUO.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Leikkipuisto Lahnalahti"
+    },
     "link": "https://www.hel.fi/fi/kasvatus-ja-koulutus/leikkipuisto-lahnalahti"
   },
   {
     "title": "Koululaisten torstai",
+    "description": "<p>Hauskaa ja luovaa puuhaa viikoittain vaihtuvin teemoin ja tekniikoin. Toimintaa suunnitellaan osallistujien toiveiden pohjalta. Tuokioissa mm. askarrellaan, rakennellaan legoilla ja pelaillaan erilaisia pelejä ohjatusti. Tervetuloa mukaan!</p>",
     "start_time": "2025-01-16T12:00:00Z",
     "end_time": "2025-05-22T12:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/_MIK6477_w.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": ""
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:agkgjuf3h4"
   },
   {
-    "title": "Koululaisten torstai",
-    "start_time": "2025-05-08T11:00:00Z",
-    "end_time": "2025-05-08T12:00:00Z",
-    "link": "https://tapahtumat.hel.fi/en/events/helsinki:agkgjufqje"
-  },
-  {
     "title": "Ohjaamo Itäkeskuksessa",
+    "description": "<p>Ohjaamo Helsinki tarjoaa 15–29-vuotiaille nuorille maksutonta neuvontaa ja ohjausta. Ohjaamoon voi tulla ilman ajanvarausta. Apua arjen pulmiin saa myös puhelimitse, sähköpostitse, verkkolomakkeella ja chatissa. Neuvoa saa työhön, opiskeluun, talouteen, asumiseen ja hyvinvointiin liittyen. Ohjaamossa järjestetään myös ryhmiä ja tapahtumia.&nbsp;</p><p>Itäkeskuksen Ohjaamossa voit saada talous- ja velkaneuvontaa ja apua työnhakuun. Ohjaamo Helsinki on Helsingin kaupungin maksuton palvelu nuorille.&nbsp;</p><p>&nbsp;</p><p>Ohjaamossa on tavattavissa:</p><ul><li>Työnhaun asiantuntija</li><li>Ennakoiva talousneuvonta, talous- ja velkaneuvonnan ja ulosoton asiantuntijat</li><li>Walk in -terapia</li><li>Etsivä nuorisotyöntekijä</li></ul><p>Lisätietoja: <a href=\"https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fnuorten.hel.fi%2Fopiskelu-ja-tyo%2Fohjaamo%2F&amp;data=05%7C01%7Caino.toiviainen-koskinen%40hel.fi%7C81bfeb5ea23e41c64f1808db890ab54a%7C3feb6bc1d7224726966c5b58b64df752%7C1%7C0%7C638254451312444324%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=kK7WILZgL8slU2Q%2FcQUyEHKBpx9QFY0w7qjx0bu1Ag0%3D&amp;reserved=0\">https://nuorten.hel.fi/opiskelu-ja-tyo/ohjaamo/</a>&nbsp;</p>",
     "start_time": "2024-08-08T09:00:00Z",
     "end_time": "2025-06-12T13:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/N%C3%A4ytt%C3%B6kuva_2024-08-01_134541.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Ohjaamo"
+    },
     "link": "https://tapahtumat.hel.fi/en/events/helsinki:agiq3e2cby"
   },
   {
-    "title": "Ohjaamo Itäkeskuksessa",
-    "start_time": "2025-05-08T09:00:00Z",
-    "end_time": "2025-05-08T13:00:00Z",
-    "link": "https://tapahtumat.hel.fi/en/events/helsinki:agjvhiqkhq"
-  },
-  {
     "title": "Should we shout? – Exhibition about sound",
+    "description": "<p>Is it time to make some noise?</p><p>During the 2024–2025 term, Annantalo has been dominated by sound. The house has been ringing in many ways as the sound theme has been used at exhibitions and workshops. Now is the time to warm up your voice and perk your ears as the artworks completed during the season will finally be on display!</p><p>The exhibition is a continuation of the sound theme launched in the autumn of 2024 with the exhibition World of Sound. The works of the student groups will be displayed together with the works of professional artists.</p><p>The opening of the exhibition is on Friday 14 March at 17.00–19.00. <br>There will be amazing art, interactive dance jams, popcorn, and the return of our beloved mascot B-Ö!</p><p>Welcome to listen!</p>",
     "start_time": "2025-03-15",
     "end_time": "2025-08-30",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventRescheduled",
+    "images": [
+      "http://www.annantalo.fi/instancedata/prime_product_resurssivaraus/kulke/embeds/EventPic_759781.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": null,
     "link": "http://www.annantalo.fi/en/events/event/1BAB34EFC6F17105D6CF3F12973A2D17/Should_we_shout_"
   },
   {
     "title": "Perheaamu",
+    "description": "<p>Koko perheen yhdessäoloa, leikkiä, liikettä,&nbsp;loruilua,&nbsp;taiteilua tai musiikkia&nbsp;leikkipuiston pihalla tai&nbsp;sisätiloissa.​</p><p>Tarkemmat tiedot tämänkertaisesta tuokiosta löydät viikko-ohjelmasta leikkipuisto Lahnalahden Instagram sivulta ja leikkipuiston ikkunasta.<br>&nbsp;</p>",
     "start_time": "2024-08-30T07:00:00Z",
     "end_time": "2025-06-27T08:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/perheaamu_siVzcQt.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Leikkipuisto Lahnalahti"
+    },
+    "link": "https://www.hel.fi/fi/kasvatus-ja-koulutus/leikkipuisto-lahnalahti"
+  },
+  {
+    "title": "Perheaamu",
+    "description": "<p>Koko perheen yhdessäoloa, leikkiä, liikettä,&nbsp;loruilua,&nbsp;taiteilua tai musiikkia&nbsp;leikkipuiston pihalla tai&nbsp;sisätiloissa.​</p><p>Tarkemmat tiedot tämänkertaisesta tuokiosta löydät viikko-ohjelmasta leikkipuisto Lahnalahden Instagram sivulta ja leikkipuiston ikkunasta.<br>&nbsp;</p>",
+    "start_time": "2025-05-09T07:00:00Z",
+    "end_time": "2025-05-09T08:30:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/perheaamu_siVzcQt.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Leikkipuisto Lahnalahti"
+    },
     "link": "https://www.hel.fi/fi/kasvatus-ja-koulutus/leikkipuisto-lahnalahti"
   },
   {
     "title": "Vikkelät jalat",
+    "description": "<p>Leikkiä ja liikettä yli 1-vuotiaille leikkipuiston pihalla tai sisätiloissa.</p><p>Tarkemmat tiedot tämänkertaisesta tuokiosta löydät viikko-ohjelmasta leikkipuisto Lahnalahden Instagram sivulta ja leikkipuiston ikkunasta.<br>&nbsp;</p>",
     "start_time": "2024-08-28T07:00:00Z",
     "end_time": "2025-06-25T08:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": 1,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/vikkel%C3%A4t_jalat.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Leikkipuisto Lahnalahti"
+    },
     "link": "https://www.hel.fi/fi/kasvatus-ja-koulutus/leikkipuisto-lahnalahti"
   },
   {
     "title": "Luovuus lentoon",
+    "description": "<p>Ohjattua taiteilua ja kädentaitoja kaikenikäisille leikkipuiston sisätiloissa.</p><p>Tarkemmat tiedot tämänkertaisesta tuokiosta löydät viikko-ohjelmasta leikkipuisto Lahnalahden Instagram sivulta ja leikkipuiston ikkunasta.<br>&nbsp;</p>",
     "start_time": "2024-09-03T07:00:00Z",
     "end_time": "2025-06-24T08:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/luovuus_lentoon.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Leikkipuisto Lahnalahti"
+    },
     "link": "https://www.hel.fi/fi/kasvatus-ja-koulutus/leikkipuisto-lahnalahti"
   },
   {
     "title": "Lahniksen leikit",
+    "description": "<p>Vaihtuvia leikkiteemoja yli 1-vuotiaille leikkipuiston pihalla tai sisätiloissa.</p><p>Tarkemmat tiedot tämänkertaisesta tuokiosta löydät viikko-ohjelmasta leikkipuisto Lahnalahden Instagram sivulta ja leikkipuiston ikkunasta.<br>&nbsp;</p>",
     "start_time": "2024-08-29T07:00:00Z",
     "end_time": "2025-06-26T08:00:00Z",
-    "link": "https://www.hel.fi/fi/kasvatus-ja-koulutus/leikkipuisto-lahnalahti"
-  },
-  {
-    "title": "Lahniksen leikit",
-    "start_time": "2025-05-08T07:00:00Z",
-    "end_time": "2025-05-08T08:00:00Z",
+    "location": "",
+    "address": "",
+    "latitude": null,
+    "longitude": null,
+    "is_free": true,
+    "audience_min_age": null,
+    "audience_max_age": null,
+    "event_status": "EventScheduled",
+    "images": [
+      "https://api.hel.fi/linkedevents/media/images/t%C3%A4n%C3%A4%C3%A4n_leikit%C3%A4%C3%A4n_X364oB2.jpg"
+    ],
+    "keywords": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "provider": {
+      "fi": "Leikkipuisto Lahnalahti"
+    },
     "link": "https://www.hel.fi/fi/kasvatus-ja-koulutus/leikkipuisto-lahnalahti"
   }
 ]
