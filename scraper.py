@@ -2,18 +2,31 @@ import json
 import os
 import requests
 
-def fetch_all_events(url):
-    response = requests.get(url)
-    print(f"🔄 Fetching: {url}")
-    print(f"📄 Response content-type: {response.headers.get('Content-Type')}")
-    if "application/json" in response.headers.get("Content-Type", ""):
+def fetch_all_events(base_url):
+    all_events = []
+    url = base_url
+
+    while url:
+        response = requests.get(url)
+        print(f"🔄 Fetching: {url}")
+        content_type = response.headers.get("Content-Type", "")
+        print(f"📄 Response content-type: {content_type}")
+
+        if "application/json" not in content_type:
+            print("❌ La respuesta no es JSON. Probablemente es HTML o un error.")
+            print(response.text[:300])
+            break
+
         data = response.json()
-        print(f"✅ Total events fetched: {len(data.get('data', []))}")
-        return data.get("data", [])
-    else:
-        print("❌ La respuesta no es JSON. Probablemente es HTML o un error.")
-        print(response.text[:300])  # mostrar un preview del HTML o error
-        return []
+        events = data.get("data", [])
+        all_events.extend(events)
+        print(f"✅ Events fetched this page: {len(events)} | Total so far: {len(all_events)}")
+
+        # Paginación: ir a la siguiente página si existe
+        url = data.get("meta", {}).get("next")
+
+    print(f"🎉 Total events fetched: {len(all_events)}")
+    return all_events
 
 def format_events(raw_events):
     formatted = []

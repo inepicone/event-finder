@@ -1,10 +1,12 @@
 {
     "text": "",
     "categories": [],
-    "dateTypes": ["today"],
+    "dateTypes": [],
     "isFree": true,
     "onlyChildrenEvents": true,
-    "onlyEveningEvents": false,
+    "onlyEveningEvents": true,
     "onlyRemoteEvents": false,
-    "places": []
+    "places": [],
+    "startDate": "2025-05-29",
+    "endDate": "2025-05-29"
   }

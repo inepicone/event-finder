@@ -1,10 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from filters_utils import build_api_url_from_filters
+from filters_utils import build_url_from_filters, build_api_url_from_filters
 import json
 import scraper
 import requests
 from datetime import datetime
+
 
 def check_site_title():
     options = Options()
@@ -18,10 +19,11 @@ def check_site_title():
     print("🌐 Título de la página:", driver.title)
     driver.quit()
 
+
 def get_filters_from_json():
     with open("filters.json", "r") as f:
-        user_input = json.load(f)
-    return user_input
+        return json.load(f)
+
 
 def get_keyword_id(text):
     url = f"https://api.hel.fi/linkedevents/v1/keyword/?text={text}"
@@ -41,19 +43,27 @@ def get_keyword_id(text):
         print(f"❌ Error buscando keyword. Status code: {response.status_code}")
         return None
 
+
 if __name__ == "__main__":
     check_site_title()
 
     filters = get_filters_from_json()
 
-    # 🔄 Traducir dateTypes (como "today") a start y end en formato YYYY-MM-DD
     if "dateTypes" in filters and "today" in filters["dateTypes"]:
         today = datetime.today().date().isoformat()
         filters["start"] = today
         filters["end"] = today
+    else:
+        if "startDate" in filters:
+            filters["start"] = filters["startDate"]
+        if "endDate" in filters:
+            filters["end"] = filters["endDate"]
+
+    web_url = build_url_from_filters(filters)
+    print(f"🔍 Vista previa en navegador: {web_url}")
 
     url = build_api_url_from_filters(filters)
-    print("🔗 URL generada:", url)
+    print("🔗 URL generada para API:", url)
 
     raw_events = scraper.fetch_all_events(url)
     events = scraper.format_events(raw_events)
