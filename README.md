@@ -74,6 +74,7 @@ Using Docker: docker-compose up --build
 
 🛠️ Customization
 You can modify or extend filters in the filters.json file. Example:
+```
 {
   "text": "festival",
   "categories": ["music", "food"],
@@ -83,8 +84,10 @@ You can modify or extend filters in the filters.json file. Example:
   "onlyChildrenEvents": false,
   "onlyEveningEvents": true
 }
+```
 
 🧩 Useful Links
+
 Helsinki Event Portal: https://tapahtumat.hel.fi/en
 
 Linked Events API: https://api.hel.fi/linkedevents/v1/event/0
