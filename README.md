@@ -38,22 +38,21 @@ Example search URLs from the official site:
   `https://tapahtumat.hel.fi/en/search?onlyEveningEvents=true`
 
 ---
-
 ## 📁 Project Structure
 
+```
 event-finder/
 │
-├── filters.json # JSON config file with selected filters
-├── filters.py # Logic for filter creation and handling
-├── filters_utils.py # Helper functions for filters and URL construction
-├── scraper.py # Main logic for fetching data from the API
-├── main.py # Entry point to execute search
-├── Dockerfile # Container configuration
-├── docker-compose.yml # Docker environment setup
-├── requirements.txt # Python dependencies
-└── README.md # This file
-
-
+├── filters.json          # JSON config file with selected filters
+├── filters.py            # Logic for filter creation and handling
+├── filters_utils.py      # Helper functions for filters and URL construction
+├── scraper.py            # Main logic for fetching data from the API
+├── main.py               # Entry point to execute search
+├── Dockerfile            # Container configuration
+├── docker-compose.yml    # Docker environment setup
+├── requirements.txt      # Python dependencies
+└── README.md             # This file
+```
 ---
 
 ## 🚀 Getting Started
