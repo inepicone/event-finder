@@ -1,80 +1,92 @@
-# 🎯 Helsinki Event Finder
+# 🎯 Helsinki Event Finder + AI Scraper
 
-This is a Python-based project that allows you to search and filter public events in Helsinki using the [Linked Events API](https://tapahtumat.hel.fi/en/). It acts as a backend scraper and filter system to fetch cultural, recreational, and public events from the official city event listing.
-
-### 🌐 Source site:
-The events are retrieved from the official Helsinki event portal: [https://tapahtumat.hel.fi/en](https://tapahtumat.hel.fi/en)
+This project lets you **search and extract public events in Helsinki** through multiple strategies: official APIs and experimental HTML scraping using LLMs like GPT.
 
 ---
 
-## 🔍 Available Filters
+## 🌐 Event Sources
 
-You can configure your search by combining any of the following filters:
+Currently, we support event data from:
 
-| Filter               | Description                                                                                     | Example value(s)                                   |
-|----------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| `text`               | General free-text search                                                                        | `"jazz"`, `"workshop"`                              |
-| `categories`         | Filter by event category                                                                        | `music`, `nature`, `sport`, `movie`, `museum`, etc. |
-| `dateTypes`          | Filter by relative date                                                                         | `today`, `tomorrow`, `this_week`, `weekend`         |
-| `start`, `end`       | Specify a custom date range                                                                     | `start=2025-06-06&end=2025-07-19`                    |
-| `places`             | Filter by venue ID (TPREK format)                                                               | `tprek:6880`                                        |
-| `isFree`             | Show only free events                                                                           | `true`                                              |
-| `onlyChildrenEvents` | Show only events targeted at children or families                                               | `true`                                              |
-| `onlyEveningEvents`  | Show only events starting after 17:00                                                           | `true`                                              |
-| `onlyRemoteEvents`   | Show only virtual/remote events                                                                 | `true`                                              |
-
-Example search URLs from the official site:
-- Keyword search:  
-  `https://tapahtumat.hel.fi/en/search?text=music`
-- Category filter:  
-  `https://tapahtumat.hel.fi/en/search?categories=music%2Cnature`
-- Date range:  
-  `https://tapahtumat.hel.fi/en/search?start=2025-06-06&end=2025-07-19`
-- Free events:  
-  `https://tapahtumat.hel.fi/en/search?isFree=true`
-- Events for kids:  
-  `https://tapahtumat.hel.fi/en/search?onlyChildrenEvents=true`
-- Evening events:  
-  `https://tapahtumat.hel.fi/en/search?onlyEveningEvents=true`
+- [https://tapahtumat.hel.fi/en](https://tapahtumat.hel.fi/en) — the official Helsinki city event portal (via public API)  
+- Sites without APIs like [lippu.fi](https://www.lippu.fi) — coming soon via AI-powered scraping
 
 ---
+
+## 🔍 API Filters (Linked Events)
+
+You can configure your search using any combination of filters inside the `filters.json` file:
+
+| Filter                | Description                                       | Example                                  |
+|-----------------------|---------------------------------------------------|------------------------------------------|
+| `text`                | General free-text query                           | `"jazz"`, `"workshop"`                   |
+| `categories`          | Event categories                                  | `music`, `nature`, `sport`, etc.         |
+| `dateTypes`           | Relative date filters                             | `today`, `this_week`, `weekend`          |
+| `start`, `end`        | Custom date range                                 | `"2025-06-06"` to `"2025-07-19"`         |
+| `places`              | Venue ID (TPREK format)                           | `"tprek:6880"`                           |
+| `isFree`              | Only free events                                  | `true`                                   |
+| `onlyChildrenEvents`  | Events for kids/families                          | `true`                                   |
+| `onlyEveningEvents`   | Events starting after 17:00                       | `true`                                   |
+| `onlyRemoteEvents`    | Online/remote events only                         | `true`                                   |
+
+---
+
 ## 📁 Project Structure
 
-```
+```bash
 event-finder/
 │
-├── filters.json          # JSON config file with selected filters
-├── filters.py            # Logic for filter creation and handling
-├── filters_utils.py      # Helper functions for filters and URL construction
-├── scraper.py            # Main logic for fetching data from the API
-├── main.py               # Entry point to execute search
-├── Dockerfile            # Container configuration
-├── docker-compose.yml    # Docker environment setup
-├── requirements.txt      # Python dependencies
-└── README.md             # This file
-```
----
-
+├── api_scraper/                  # API-based scraping (Linked Events API)
+│   ├── filters.json
+│   ├── filters.py
+│   ├── filters_utils.py
+│   ├── scraper.py
+│   └── __init__.py
+│
+├── ai_scraper/                   # NEW: AI-powered semantic scraping
+│   ├── ai_extractor.py           # Main extraction logic
+│   ├── prompts.py                # LLM prompt templates
+│   ├── models.py                 # Wrappers for GPT, HF models, etc.
+│   ├── sample_html/              # Real HTML files for testing
+│   ├── extracted_json/           # Output: structured event data
+│   └── __init__.py
+│
+├── notebooks/                    # Demos and debugging
+│   └── event_ai_extraction.ipynb
+│
+├── main.py                       # Main entry point (API or AI mode)
+├── Dockerfile                    # Container setup
+├── docker-compose.yml            # Docker environment
+├── requirements.txt              # Python dependencies
+└── README.md                     # This file
 ## 🚀 Getting Started
 
-### Requirements
-
+### Prerequisites
 - Python 3.8+
-- Optionally: Docker
+- *(Optional)* Docker & Docker Compose
 
-### Running locally
+---
 
-1. Install dependencies: pip install -r requirements.txt
+### 🧪 Run Locally
 
-2. Set your filters in filters.json.
-
-3. Run the script: python main.py
-
-Using Docker: docker-compose up --build
-
-🛠️ Customization
-You can modify or extend filters in the filters.json file. Example:
+```bash
+pip install -r requirements.txt
+python main.py
 ```
+
+Or use Docker:
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## ⚙️ Customize Filters
+
+Edit the `filters.json` file to apply custom filters like so:
+
+```json
 {
   "text": "festival",
   "categories": ["music", "food"],
@@ -84,10 +96,31 @@ You can modify or extend filters in the filters.json file. Example:
   "onlyChildrenEvents": false,
   "onlyEveningEvents": true
 }
+
 ```
 
-🧩 Useful Links
+---
 
-Helsinki Event Portal: https://tapahtumat.hel.fi/en
+## 🤖 AI Mode (no API required)
 
-Linked Events API: https://api.hel.fi/linkedevents/v1/event/0
+The `ai_scraper/` module enables semantic extraction from raw HTML using LLMs like GPT-4 or Claude.
+
+**How it works:**
+
+1. Save an HTML page (e.g., `sample_html/lippu_01.html`)
+2. Run `ai_extractor.py` to extract structured data
+3. Results are saved in `extracted_json/`
+
+🧠 Useful for scraping sites that don’t offer APIs or structured data.
+
+---
+
+## 🔗 Useful Links
+
+- 🔹 [Helsinki Event Portal](https://tapahtumat.hel.fi/en)
+- 🔹 [Linked Events API](https://api.hel.fi/linkedevents/v1/event/)
+- 🔹 *Inspiration*: [Inven.AI](https://www.invenai.com/) use of LLMs for data extraction
+
+---
+
+Let us know if you’d like a CLI entrypoint or Flask endpoints for running both scrapers more interactively.
